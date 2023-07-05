@@ -24,7 +24,7 @@ jobs:
       run: |
         $env:TOKEN="${{ secrets.GITHUB_TOKEN }}"
         $env:USER="sujalgera01"
-        $env:URL="https://api.github.com/users/$USER"
+        $env:URL="https://api.github.com/users/sujalgera01"
 
         $RESPONSE = Invoke-RestMethod -Headers @{Authorization = "token $env:TOKEN"} -Uri $env:URL
         $CONTRIBUTIONS = $RESPONSE.contributions
